@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>🏥 NOQ</h1>
+<h1>🏥 NOQ — Real-Time Multi-Tenant Hospital Management System</h1>
 
 <p>
   <a href="https://noq-hospital.vercel.app/signup">
