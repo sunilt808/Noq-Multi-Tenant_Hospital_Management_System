@@ -1,37 +1,30 @@
 <div align="center">
 
-<table border="0">
-<tr>
-<td align="left">
 <h1>🏥 NOQ</h1>
-</td>
-
-<td align="right">
-<a href="https://noq-hospital.vercel.app/signup">
-<img src="https://img.shields.io/badge/🚀%20Live%20Demo-2ea44f?style=for-the-badge" alt="Live Demo">
-</a>
-&nbsp;
-<a href="https://github.com/sunilt808/Noq-hospital">
-<img src="https://img.shields.io/badge/💻%20Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source Code">
-</a>
-&nbsp;
-<a href="https://deepwiki.com/sunilt808/Noq-hospital">
-<img src="https://img.shields.io/badge/🧠%20Ask%20DeepWiki-5B5BD6?style=for-the-badge" alt="Ask DeepWiki">
-</a>
-</td>
-</tr>
-</table>
-
-<h3>Multi-Tenant Hospital Management System</h3>
 
 <p>
-<strong>One platform. Multiple hospitals. Complete healthcare operations.</strong>
+  <a href="https://noq-hospital.vercel.app/signup">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-2ea44f?style=for-the-badge" alt="Live Demo">
+  </a>
+  <a href="https://github.com/sunilt808/Noq-hospital">
+    <img src="https://img.shields.io/badge/💻%20Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source Code">
+  </a>
+  <a href="https://deepwiki.com/sunilt808/Noq-hospital">
+    <img src="https://img.shields.io/badge/🧠%20Ask%20DeepWiki-5B5BD6?style=for-the-badge" alt="Ask DeepWiki">
+  </a>
+</p>
+
+<h2>Multi-Tenant Hospital Management System</h2>
+
+<p>
+  <strong>One platform. Multiple hospitals. Complete healthcare operations.</strong>
 </p>
 
 <p>
-NOQ is a full-stack multi-tenant hospital management system that
-centralizes and connects hospital operations across patients, doctors,
-hospital managers, and platform administrators.
+  NOQ is a full-stack <strong>multi-tenant hospital management system</strong>
+  that unifies hospital operations across patients, doctors, hospital managers,
+  and platform administrators — from appointments and digital queues to
+  consultations, medical records, billing, and revenue.
 </p>
 
 </div>
