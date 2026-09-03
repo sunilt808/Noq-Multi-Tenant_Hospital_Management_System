@@ -1,235 +1,547 @@
 <div align="center">
 
-# 🏥 NOQ
+<table width="100%" border="0">
+<tr>
+<td align="left" width="45%">
 
-### Smart Queue Management & Hospital Operations Platform
+<h1>🏥 NOQ</h1>
 
-**Appointments → Tokens → Queues → Consultations → Records → Billing**
+</td>
 
-<br>
+<td align="right" width="55%">
 
 <a href="https://noq-hospital.vercel.app/signup">
-  <img src="https://img.shields.io/badge/🚀%20Live%20Demo-2ea44f?style=for-the-badge" alt="Live Demo">
-</a>
-&nbsp;
-<a href="https://github.com/sunilt808/Noq-hospital">
-  <img src="https://img.shields.io/badge/💻%20Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source Code">
-</a>
-&nbsp;
-<a href="https://deepwiki.com/sunilt808/Noq-hospital">
-  <img src="https://img.shields.io/badge/🧠%20Ask%20DeepWiki-5B5BD6?style=for-the-badge" alt="Ask DeepWiki">
+<img src="https://img.shields.io/badge/🚀%20Live%20Demo-2ea44f?style=for-the-badge" alt="Live Demo">
 </a>
 
-<br><br>
+<a href="https://github.com/sunilt808/Noq-hospital">
+<img src="https://img.shields.io/badge/💻%20Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source Code">
+</a>
+
+<a href="https://deepwiki.com/sunilt808/Noq-hospital">
+<img src="https://img.shields.io/badge/🧠%20Ask%20DeepWiki-5B5BD6?style=for-the-badge" alt="Ask DeepWiki">
+</a>
+
+</td>
+</tr>
+</table>
+
+<h2>Multi-Tenant Hospital Management System</h2>
 
 <p>
-  <em>
-    A full-stack hospital management platform that connects appointments,
-    queues,<br>
-    consultations, medical records, billing, and revenue operations.
-  </em>
+<strong>One platform. Multiple hospitals. Complete healthcare operations.</strong>
+</p>
+
+<p>
+NOQ is a full-stack <strong>multi-tenant hospital management system</strong>
+that brings patients, doctors, hospital managers, and platform administrators
+into one connected digital ecosystem.
+</p>
+
+<p>
+<strong>
+Appointments → Tokens → Queues → Consultations → Medical Records → Billing → Revenue
+</strong>
 </p>
 
 </div>
 
 ---
 
-## ✨ Why NOQ?
+## 🏥 What is NOQ?
 
-Hospital visits often involve long waiting times, disconnected workflows, and limited visibility for patients.
+**NOQ is a multi-tenant hospital management and queue operations platform designed to manage the complete lifecycle of hospital operations.**
 
-**NOQ** brings the complete hospital journey into one digital platform — from booking an appointment and generating a token to consultation, medical records, billing, and revenue management.
+Instead of treating appointments, queues, consultations, medical records, and billing as separate systems, NOQ connects them into a single workflow.
 
-### 🎯 What NOQ Solves
+A hospital can use NOQ to manage:
 
-* ⏳ Reduces unnecessary patient waiting
-* 🎟️ Provides reliable digital token generation
-* 📍 Gives patients queue visibility
-* 👨‍⚕️ Simplifies doctor workflows
-* 📋 Centralizes medical records
-* 💳 Streamlines billing and payments
-* 📊 Provides hospital revenue analytics
-* 🏥 Supports multiple hospitals on one platform
+* 🏥 Hospitals and departments
+* 👨‍⚕️ Doctors and staff
+* 👤 Patients
+* 📅 Appointments
+* 🎟️ Digital tokens
+* ⏳ Real-time queue workflows
+* 🩺 Doctor consultations
+* 💊 Prescriptions
+* 📋 Medical records
+* 💳 Billing and payments
+* 💰 Revenue and distribution
+* 🔔 Notifications
+* ⭐ Reviews and feedback
+* 📝 Complaints
 
-> **Don't wait in the queue. Know your place in it.**
-
----
-
-## ⚡ Key Features
-
-| Feature                          | Description                                                        |
-| :------------------------------- | :----------------------------------------------------------------- |
-| 🎟️ **Atomic Token Generation**  | Race-condition-safe token generation for reliable queue management |
-| 🏥 **Multi-Tenant Architecture** | Multiple hospitals can operate independently on one platform       |
-| 🔐 **JWT + RBAC Security**       | Secure authentication and role-based authorization                 |
-| 📅 **Appointment Management**    | Complete appointment booking and lifecycle management              |
-| ⏳ **Queue Management**           | Track and manage patient queues in real time                       |
-| 🚫 **No-Show Escalation**        | Automated warning → fine → blocking workflow                       |
-| 👨‍⚕️ **Doctor Consultations**   | Consultation, prescriptions, and clinical records                  |
-| 📋 **Medical Records**           | Centralized patient medical history                                |
-| 💳 **Billing & Payments**        | Bill generation and payment tracking                               |
-| 💰 **Revenue Analytics**         | Revenue tracking and distribution                                  |
-| 🔔 **Notifications**             | Alerts for appointments, queues, and billing                       |
-| ⭐ **Reviews & Feedback**         | Patient ratings and feedback                                       |
-| 📝 **Complaint Management**      | Structured complaint handling                                      |
+NOQ also provides a **platform-level administration layer**, allowing the platform operator to manage hospitals, approvals, users, revenue, and auditing.
 
 ---
 
-## 🧠 How It Works
+# 🎯 Why NOQ?
+
+Hospital management is not a single operation.
+
+A patient's journey can involve:
+
+```text
+Appointment
+     ↓
+Token
+     ↓
+Queue
+     ↓
+Doctor
+     ↓
+Consultation
+     ↓
+Prescription
+     ↓
+Medical Record
+     ↓
+Billing
+     ↓
+Payment
+```
+
+Behind this patient journey, hospital administrators also need to manage:
+
+```text
+Hospital
+   ↓
+Departments
+   ↓
+Doctors
+   ↓
+Staff
+   ↓
+Patients
+   ↓
+Appointments
+   ↓
+Queues
+   ↓
+Revenue
+   ↓
+Analytics
+```
+
+When these workflows are disconnected, hospitals have to coordinate between multiple systems and manual processes.
+
+### NOQ connects these operations into one platform.
+
+---
+
+# 🏢 Multi-Tenant Architecture
+
+Multi-tenancy is one of the core concepts behind NOQ.
+
+NOQ is designed so that **multiple hospitals can operate on the same platform**, while each hospital manages its own operational environment.
+
+```text
+                              ┌─────────────────────────┐
+                              │          NOQ             │
+                              │ Multi-Tenant Platform   │
+                              └────────────┬────────────┘
+                                           │
+                 ┌─────────────────────────┼─────────────────────────┐
+                 │                         │                         │
+                 ▼                         ▼                         ▼
+        ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
+        │   HOSPITAL A    │       │   HOSPITAL B    │       │   HOSPITAL C    │
+        ├─────────────────┤       ├─────────────────┤       ├─────────────────┤
+        │ Departments     │       │ Departments     │       │ Departments     │
+        │ Doctors         │       │ Doctors         │       │ Doctors         │
+        │ Staff           │       │ Staff           │       │ Staff           │
+        │ Patients        │       │ Patients        │       │ Patients        │
+        │ Appointments    │       │ Appointments    │       │ Appointments    │
+        │ Tokens          │       │ Tokens          │       │ Tokens          │
+        │ Queues          │       │ Queues          │       │ Queues          │
+        │ Medical Records │       │ Medical Records │       │ Medical Records │
+        │ Billing         │       │ Billing         │       │ Billing         │
+        └─────────────────┘       └─────────────────┘       └─────────────────┘
+```
+
+### Why this matters
+
+A single NOQ deployment can support multiple hospitals without requiring each hospital to run a completely separate application.
+
+The architecture provides a foundation for:
+
+* Hospital-level operations
+* Hospital-specific users
+* Hospital-specific departments
+* Hospital-specific doctors
+* Hospital-specific patients
+* Hospital-specific appointments
+* Hospital-specific queues
+* Hospital-specific billing
+* Hospital-level revenue tracking
+
+---
+
+# 👥 Four Portals
+
+NOQ is built around **four primary portals**, each designed for a different role in the healthcare ecosystem.
+
+## 👤 Patient Portal
+
+Patients can:
+
+* Create an account
+* Book appointments
+* Select hospitals and departments
+* Select doctors
+* Receive tokens
+* Track queue status
+* Follow appointment progress
+* View medical records
+* View prescriptions
+* View bills
+* Make payments
+* Receive notifications
+* Submit reviews
+* Submit complaints
+
+---
+
+## 👨‍⚕️ Doctor Portal
+
+Doctors can:
+
+* View assigned appointments
+* Manage their queue
+* Call patients
+* Conduct consultations
+* Create prescriptions
+* Write medical records
+* Review patient history
+* Complete consultations
+* Manage their clinical workflow
+
+---
+
+## 🏥 Hospital Manager Portal
+
+Hospital managers can manage the operational side of a hospital.
+
+Capabilities include:
+
+* Hospital management
+* Department management
+* Doctor management
+* Staff management
+* Patient management
+* Appointment monitoring
+* Queue monitoring
+* Revenue tracking
+* Operational analytics
+* Reviews
+* Complaints
+* Hospital-level workflows
+
+---
+
+## 🛡️ Platform Admin Portal
+
+Platform administrators operate the NOQ platform itself.
+
+Capabilities include:
+
+* Hospital approval
+* Platform user management
+* Hospital oversight
+* Platform revenue
+* Operational monitoring
+* Audit information
+* Platform-level administration
+
+---
+
+# 🔄 Complete NOQ Workflow
+
+NOQ connects the complete healthcare journey.
 
 ```mermaid
 flowchart LR
-    A[📅 Appointment] --> B[🎟️ Token]
-    B --> C[⏳ Queue]
-    C --> D[👨‍⚕️ Doctor]
-    D --> E[💊 Prescription]
-    D --> F[📋 Medical Record]
-    E --> G[💳 Billing]
-    F --> G
-    G --> H[💰 Revenue]
+
+    A["📅 Appointment"]
+    B["🎟️ Token"]
+    C["⏳ Queue"]
+    D["👨‍⚕️ Doctor"]
+    E["🩺 Consultation"]
+    F["💊 Prescription"]
+    G["📋 Medical Record"]
+    H["💳 Billing"]
+    I["💰 Revenue"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    F --> H
+    G --> H
+    H --> I
 ```
 
-### 🔄 Patient Journey
+The important idea is that these are not isolated modules.
+
+They form a **connected operational lifecycle**.
+
+---
+
+# 🎟️ Queue & Token Management
+
+The queue system is one of the core parts of NOQ.
+
+A typical flow is:
 
 ```text
-┌─────────────────────┐
-│  Book Appointment   │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│    Generate Token   │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│    Join Queue       │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│ Track Queue Position│
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│ Doctor Consultation │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│ Prescription +      │
-│ Medical Record      │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│   Billing & Payment │
-└──────────┬──────────┘
-           ↓
-┌─────────────────────┐
-│ Revenue & Analytics │
-└─────────────────────┘
+┌───────────────┐
+│  Appointment  │
+└───────┬───────┘
+        ↓
+┌───────────────┐
+│ Token Created │
+└───────┬───────┘
+        ↓
+┌───────────────┐
+│    WAITING    │
+└───────┬───────┘
+        ↓
+┌───────────────┐
+│     CALLED    │
+└───────┬───────┘
+        ↓
+┌──────────────────┐
+│ IN CONSULTATION  │
+└───────┬──────────┘
+        ↓
+┌───────────────┐
+│   COMPLETED   │
+└───────────────┘
 ```
 
+## ⚛️ Atomic Token Generation
+
+NOQ uses an **atomic token-generation approach** to protect queue integrity when multiple requests happen concurrently.
+
+The objective is to prevent:
+
+* Duplicate token assignment
+* Conflicting token numbers
+* Race-condition-related queue corruption
+
+This is especially important in a real hospital environment where multiple patients may request appointments or tokens around the same time.
+
 ---
 
-## 👥 Four Portals
+# 🚫 No-Show Escalation
 
-NOQ provides dedicated experiences for every major role in the hospital ecosystem.
+NOQ also includes a structured no-show workflow.
 
-| Portal           | Who Uses It              | Key Actions                                                               |
-| :--------------- | :----------------------- | :------------------------------------------------------------------------ |
-| 👤 **Patient**   | Patients & visitors      | Book appointments, generate tokens, track queues, view records, pay bills |
-| 👨‍⚕️ **Doctor** | Physicians & specialists | Manage queues, consult patients, prescribe, maintain records              |
-| 🏥 **Manager**   | Hospital administrators  | Manage departments, doctors, staff, revenue, analytics                    |
-| 🛡️ **Admin**    | Platform operators       | Approve hospitals, monitor platform revenue, audit activities             |
+```text
+             Missed Appointment
+                    │
+                    ▼
+                 Warning
+                    │
+                    ▼
+                  Fine
+                    │
+                    ▼
+                 Block
+```
+
+Instead of simply marking an appointment as missed, NOQ provides an escalation model for repeated no-shows.
+
+This allows hospitals to enforce their own operational policies.
 
 ---
 
-## 🏗️ Architecture
+# 💳 Billing & Revenue
+
+NOQ connects clinical operations with financial operations.
+
+```mermaid
+flowchart LR
+
+    A["🩺 Consultation"]
+    B["💊 Prescription"]
+    C["📋 Medical Record"]
+    D["💳 Bill"]
+    E["💵 Payment"]
+    F["💰 Revenue"]
+    G["📊 Analytics"]
+
+    A --> D
+    B --> D
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+```
+
+This creates a complete path from:
+
+**Patient → Consultation → Bill → Payment → Revenue → Analytics**
+
+---
+
+# 🔐 Security Architecture
+
+Security is implemented at both the authentication and authorization levels.
+
+```text
+                     ┌─────────────────┐
+                     │      NOQ        │
+                     └────────┬────────┘
+                              │
+                     ┌────────▼────────┐
+                     │ Authentication  │
+                     │      JWT        │
+                     └────────┬────────┘
+                              │
+                     ┌────────▼────────┐
+                     │      RBAC       │
+                     └────────┬────────┘
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+          ▼                   ▼                   ▼
+      Patient              Doctor             Manager
+                                                  │
+                                                  ▼
+                                                Admin
+```
+
+### Security Features
+
+* 🔑 PBKDF2 password hashing
+* 🔐 SHA-256 based password hashing
+* 🎫 JWT authentication
+* ⏱️ JWT expiration
+* 🛡️ Role-Based Access Control
+* 🔒 Protected API endpoints
+* 🚧 Protected frontend routes
+* 👥 Role-specific portal access
+
+---
+
+# 🧱 System Architecture
+
+NOQ follows a frontend → API → domain router → database architecture.
 
 ```mermaid
 flowchart TB
 
-    subgraph Frontend["Frontend"]
-        React["React 19 + Vite"]
+    subgraph Users["Users"]
+        P["👤 Patient"]
+        D["👨‍⚕️ Doctor"]
+        M["🏥 Manager"]
+        A["🛡️ Admin"]
     end
 
-    subgraph Backend["Backend"]
-        FastAPI["FastAPI"]
-        Auth["Auth Service"]
-        Router["Domain Routers"]
+    subgraph Frontend["Frontend Layer"]
+        R["React 19"]
+        V["Vite"]
     end
 
-    subgraph Database["Database"]
-        Mongo["MongoDB Atlas"]
+    subgraph Backend["Backend Layer"]
+        F["FastAPI"]
+        AUTH["Auth Service"]
+        ROUTER["Domain Routers"]
     end
 
-    React -->|REST API| FastAPI
-    FastAPI --> Auth
-    FastAPI --> Router
-    Auth --> Mongo
-    Router --> Mongo
+    subgraph Database["Data Layer"]
+        DB["MongoDB Atlas"]
+    end
+
+    P --> R
+    D --> R
+    M --> R
+    A --> R
+
+    R --> F
+    F --> AUTH
+    F --> ROUTER
+
+    AUTH --> DB
+    ROUTER --> DB
 ```
 
-### Architecture Overview
+---
+
+# 🏗️ Architecture Layers
+
+## 🎨 Presentation Layer
+
+Built with:
+
+* React 19
+* Vite
+* Role-specific frontend portals
+* Protected routes
+* REST API integration
+
+---
+
+## 🚀 API Layer
+
+Built with:
+
+* FastAPI
+* Python 3.11+
+* Domain-based routers
+* JWT authentication
+* Role-based authorization
+
+---
+
+## 🧩 Domain Layer
+
+NOQ separates hospital operations into dedicated API domains.
 
 ```text
-                 ┌─────────────────────────┐
-                 │     React 19 + Vite     │
-                 │        Frontend         │
-                 └────────────┬────────────┘
-                              │
-                           REST API
-                              │
-                 ┌────────────▼────────────┐
-                 │         FastAPI         │
-                 │         Backend         │
-                 └────────────┬────────────┘
-                              │
-              ┌───────────────┴───────────────┐
-              │                               │
-     ┌────────▼────────┐             ┌────────▼────────┐
-     │   Auth Service  │             │  Domain Routers │
-     │    JWT + RBAC   │             │                 │
-     └────────┬────────┘             └────────┬────────┘
-              │                               │
-              └───────────────┬───────────────┘
-                              │
-                    ┌─────────▼─────────┐
-                    │   MongoDB Atlas   │
-                    │      Database     │
-                    └───────────────────┘
+Authentication
+      │
+      ├── Users
+      ├── Hospitals
+      ├── Departments
+      ├── Doctors
+      ├── Patients
+      ├── Appointments
+      ├── Queues
+      ├── Tokens
+      ├── Bills
+      ├── Revenue
+      ├── Notifications
+      ├── Prescriptions
+      ├── Medical Records
+      ├── Reviews
+      └── Complaints
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 🍃 Data Layer
 
-### Frontend
+NOQ uses **MongoDB Atlas** as its primary database.
 
-| Technology        | Purpose                           |
-| :---------------- | :-------------------------------- |
-| ⚛️ **React 19**   | User interface                    |
-| ⚡ **Vite**        | Build tool and development server |
-| 🟨 **JavaScript** | Application logic                 |
+The database layer supports the platform's:
 
-### Backend
-
-| Technology          | Purpose                  |
-| :------------------ | :----------------------- |
-| 🐍 **Python 3.11+** | Backend language         |
-| 🚀 **FastAPI**      | REST API framework       |
-| 🎫 **JWT**          | Authentication           |
-| 🛡️ **RBAC**        | Role-based authorization |
-
-### Database & Deployment
-
-| Technology           | Purpose                |
-| :------------------- | :--------------------- |
-| 🍃 **MongoDB Atlas** | Primary database       |
-| ▲ **Vercel**         | Hosting and deployment |
+* Multi-hospital data
+* User data
+* Appointment data
+* Queue data
+* Token data
+* Clinical data
+* Billing data
+* Revenue data
+* Notification data
 
 ---
 
-## 🧩 API Domains
-
-The backend is organized into domain-specific API modules.
+# 🧩 API Domains
 
 | Domain            | Responsibility                        |
 | :---------------- | :------------------------------------ |
@@ -244,7 +556,7 @@ The backend is organized into domain-specific API modules.
 | `tokens`          | Token generation and tracking         |
 | `bills`           | Billing and payments                  |
 | `revenue`         | Revenue analytics and distribution    |
-| `notifications`   | Alert and notification workflows      |
+| `notifications`   | Alerts and notification workflows     |
 | `prescriptions`   | Prescription management               |
 | `medical_records` | Clinical records and history          |
 | `reviews`         | Ratings and feedback                  |
@@ -252,107 +564,234 @@ The backend is organized into domain-specific API modules.
 
 ---
 
-## 🎟️ Queue Management
+# ⚡ Core Features
 
-Queue management is one of the core features of NOQ.
+### 🏢 Multi-Tenant Hospital Management
 
-The system uses **atomic token generation** to help prevent duplicate token assignment when multiple patients request tokens concurrently.
+Manage multiple hospitals from a single platform architecture.
 
-### Queue Lifecycle
+### 👥 Role-Based Portals
+
+Four dedicated experiences:
+
+**Patient → Doctor → Manager → Admin**
+
+### 📅 Appointment Management
+
+Manage the appointment lifecycle from booking through consultation.
+
+### 🎟️ Atomic Token Generation
+
+Generate queue tokens safely under concurrent requests.
+
+### ⏳ Digital Queue Management
+
+Track and manage patient queues throughout the consultation lifecycle.
+
+### 👨‍⚕️ Doctor Workflow
+
+Doctors can manage queues, consult patients, prescribe medication, and maintain records.
+
+### 📋 Medical Records
+
+Maintain clinical records and patient history.
+
+### 💊 Prescription Management
+
+Create and manage prescriptions as part of the consultation workflow.
+
+### 💳 Billing & Payments
+
+Connect hospital services with billing and payment workflows.
+
+### 💰 Revenue Analytics
+
+Track and distribute revenue across the platform and hospital operations.
+
+### 🚫 No-Show Enforcement
+
+Warning → Fine → Block escalation.
+
+### 🔔 Notifications
+
+Support notification and alert workflows across the platform.
+
+### ⭐ Reviews
+
+Allow patients to provide ratings and feedback.
+
+### 📝 Complaints
+
+Provide a structured complaint-management workflow.
+
+### 🔐 Security
+
+JWT authentication combined with RBAC and protected routes.
+
+---
+
+# 📊 NOQ at a Glance
+
+| Capability                | Status |
+| :------------------------ | :----: |
+| Multi-Tenant Architecture |    ✅   |
+| Multiple Hospitals        |    ✅   |
+| Patient Portal            |    ✅   |
+| Doctor Portal             |    ✅   |
+| Manager Portal            |    ✅   |
+| Admin Portal              |    ✅   |
+| Appointment Management    |    ✅   |
+| Token Generation          |    ✅   |
+| Atomic Queue Operations   |    ✅   |
+| Queue Management          |    ✅   |
+| Doctor Consultations      |    ✅   |
+| Prescriptions             |    ✅   |
+| Medical Records           |    ✅   |
+| Billing                   |    ✅   |
+| Payments                  |    ✅   |
+| Revenue Analytics         |    ✅   |
+| No-Show Escalation        |    ✅   |
+| Notifications             |    ✅   |
+| Reviews                   |    ✅   |
+| Complaints                |    ✅   |
+| JWT Authentication        |    ✅   |
+| RBAC                      |    ✅   |
+
+---
+
+# 🛠️ Technology Stack
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="25%">
+
+### ⚛️ Frontend
+
+React 19
+
+Vite
+
+</td>
+
+<td align="center" width="25%">
+
+### 🚀 Backend
+
+FastAPI
+
+Python 3.11+
+
+</td>
+
+<td align="center" width="25%">
+
+### 🍃 Database
+
+MongoDB Atlas
+
+</td>
+
+<td align="center" width="25%">
+
+### ▲ Deployment
+
+Vercel
+
+</td>
+</tr>
+</table>
+
+</div>
+
+| Layer            | Technology       |
+| :--------------- | :--------------- |
+| Frontend         | React 19         |
+| Build Tool       | Vite             |
+| Backend          | Python 3.11+     |
+| API Framework    | FastAPI          |
+| Database         | MongoDB Atlas    |
+| Authentication   | JWT              |
+| Password Hashing | PBKDF2 + SHA-256 |
+| Authorization    | RBAC             |
+| Hosting          | Vercel           |
+
+---
+
+# 🗂️ Project Structure
 
 ```text
-WAITING
-   │
-   ▼
-CALLED
-   │
-   ▼
-IN CONSULTATION
-   │
-   ▼
-COMPLETED
+Noq-hospital/
+│
+├── backend/
+│   │
+│   ├── routers/
+│   │   ├── auth/
+│   │   ├── users/
+│   │   ├── hospitals/
+│   │   ├── departments/
+│   │   ├── doctors/
+│   │   ├── patients/
+│   │   ├── appointments/
+│   │   ├── queues/
+│   │   ├── tokens/
+│   │   ├── bills/
+│   │   ├── revenue/
+│   │   ├── notifications/
+│   │   ├── prescriptions/
+│   │   ├── medical_records/
+│   │   ├── reviews/
+│   │   └── complaints/
+│   │
+│   ├── main.py
+│   ├── init_mongo.py
+│   ├── requirements.txt
+│   └── .env
+│
+├── noq-frontend/
+│   │
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── .env
+│
+└── README.md
 ```
 
-### No-Show Escalation
+---
+
+# 🔌 Application Flow
 
 ```text
-Patient Misses Token
-        │
-        ▼
-     Warning
-        │
-        ▼
-       Fine
-        │
-        ▼
-      Block
+                         NOQ PLATFORM
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+          ▼                   ▼                   ▼
+      Patients             Doctors            Managers
+          │                   │                   │
+          └───────────────────┼───────────────────┘
+                              │
+                              ▼
+                       FastAPI Backend
+                              │
+             ┌────────────────┼────────────────┐
+             │                │                │
+             ▼                ▼                ▼
+          Auth            Domains           RBAC
+             │                │                │
+             └────────────────┼────────────────┘
+                              │
+                              ▼
+                        MongoDB Atlas
 ```
 
 ---
 
-## 🔐 Security
+# 🚀 Quick Start
 
-NOQ implements security across authentication, authorization, APIs, and frontend routes.
-
-### Authentication
-
-* 🔑 PBKDF2 password hashing
-* SHA-256
-* 100,000 iterations
-* 🎫 JWT authentication
-* ⏱️ Configurable token expiration
-
-### Authorization
-
-* 🛡️ Role-Based Access Control
-* 🔒 Protected API endpoints
-* 🚧 Protected frontend routes
-* 👤 Patient permissions
-* 👨‍⚕️ Doctor permissions
-* 🏥 Manager permissions
-* 🛡️ Admin permissions
-
-> **Security Note:** Never commit `.env` files, database credentials, JWT secrets, or other sensitive configuration to the repository.
-
----
-
-## 💳 Billing & Revenue
-
-NOQ connects clinical workflows with financial operations.
-
-```text
-Doctor Consultation
-        ↓
-Prescription / Services
-        ↓
-Bill Generation
-        ↓
-Payment
-        ↓
-Revenue Distribution
-        ↓
-Analytics
-```
-
-Hospital managers can monitor revenue activity while platform administrators can manage platform-level revenue and operations.
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-Make sure you have:
-
-* Python **3.11+**
-* Node.js **18+**
-* npm
-* MongoDB / MongoDB Atlas
-* Git
-
----
-
-### 1. Clone the Repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/sunilt808/Noq-hospital.git
@@ -361,7 +800,7 @@ cd Noq-hospital
 
 ---
 
-### 2. Backend Setup
+## 2. Backend Setup
 
 ```bash
 cd backend
@@ -373,15 +812,13 @@ Create a virtual environment:
 python -m venv venv
 ```
 
-Activate it.
-
-**Linux / macOS**
+### Linux / macOS
 
 ```bash
 source venv/bin/activate
 ```
 
-**Windows**
+### Windows
 
 ```bash
 venv\Scripts\activate
@@ -395,7 +832,7 @@ pip install -r requirements.txt
 
 ---
 
-### 3. Configure Backend
+## 3. Backend Environment Variables
 
 Create:
 
@@ -415,13 +852,17 @@ JWT_EXPIRATION_MINUTES=1440
 FRONTEND_URL=http://localhost:5173
 ```
 
-Initialize MongoDB:
+---
+
+## 4. Initialize MongoDB
 
 ```bash
 python init_mongo.py
 ```
 
-Start the backend:
+---
+
+## 5. Start Backend
 
 ```bash
 uvicorn main:app --host 127.0.0.1 --port 8000 --reload
@@ -435,7 +876,7 @@ http://127.0.0.1:8000
 
 ---
 
-### 4. Frontend Setup
+## 6. Frontend Setup
 
 Open another terminal:
 
@@ -467,101 +908,11 @@ Start the frontend:
 npm run dev
 ```
 
-Frontend:
-
-```text
-http://localhost:5173
-```
-
 ---
 
-## 📂 Project Structure
+# 🔐 Environment Variables
 
-```text
-Noq-hospital/
-│
-├── backend/
-│   ├── routers/
-│   │   ├── auth/
-│   │   ├── users/
-│   │   ├── hospitals/
-│   │   ├── departments/
-│   │   ├── doctors/
-│   │   ├── patients/
-│   │   ├── appointments/
-│   │   ├── queues/
-│   │   ├── tokens/
-│   │   ├── bills/
-│   │   ├── revenue/
-│   │   ├── notifications/
-│   │   ├── prescriptions/
-│   │   ├── medical_records/
-│   │   ├── reviews/
-│   │   └── complaints/
-│   │
-│   ├── main.py
-│   ├── init_mongo.py
-│   ├── requirements.txt
-│   └── .env
-│
-├── noq-frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── .env
-│
-└── README.md
-```
-
-> The project structure may evolve as new modules and features are added.
-
----
-
-## 🗺️ Roadmap
-
-| Priority   | Feature                                                         |   Status   |
-| :--------- | :-------------------------------------------------------------- | :--------: |
-| 🔴 High    | Priority advance booking — seniors, pregnant patients, children | 🟡 Planned |
-| 🟠 Medium  | 500m location-based token generation                            | 🟡 Planned |
-| 🟡 Low     | Dockerized deployment                                           | 🟡 Planned |
-| 🟢 Backlog | CI/CD pipeline                                                  |  ⚪ Backlog |
-| 🟢 Backlog | Automated testing                                               |  ⚪ Backlog |
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome.
-
-### Workflow
-
-1. Fork the repository
-2. Create a feature branch
-
-```bash
-git checkout -b feature/your-feature
-```
-
-3. Make your changes
-4. Commit your changes
-
-```bash
-git commit -m "feat: add your feature"
-```
-
-5. Push your branch
-
-```bash
-git push origin feature/your-feature
-```
-
-6. Open a Pull Request
-
----
-
-## 🔒 Environment Variables
-
-### Backend
+## Backend
 
 ```env
 MONGODB_URL=
@@ -571,64 +922,125 @@ JWT_EXPIRATION_MINUTES=
 FRONTEND_URL=
 ```
 
-### Frontend
+## Frontend
 
 ```env
 VITE_API_URL=
 ```
 
-Add these to `.gitignore`:
+> Never commit `.env` files or production secrets to the repository.
 
-```gitignore
-.env
-.env.local
-.env.*.local
+---
 
-venv/
-__pycache__/
-node_modules/
+# 🧪 Development
+
+Recommended local environment:
+
+```text
+Frontend
+React 19 + Vite
+       │
+       │ REST
+       ▼
+Backend
+FastAPI
+       │
+       ▼
+MongoDB Atlas
 ```
 
 ---
 
-## 🔗 Project Links
+# 🗺️ Roadmap
 
-<div align="center">
-
-<a href="https://noq-hospital.vercel.app/signup">
-  <img src="https://img.shields.io/badge/🚀%20Live%20Demo-2ea44f?style=for-the-badge" alt="Live Demo">
-</a>
-
-<a href="https://github.com/sunilt808/Noq-hospital">
-  <img src="https://img.shields.io/badge/💻%20Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white" alt="Source Code">
-</a>
-
-<a href="https://deepwiki.com/sunilt808/Noq-hospital">
-  <img src="https://img.shields.io/badge/🧠%20Ask%20DeepWiki-5B5BD6?style=for-the-badge" alt="Ask DeepWiki">
-</a>
-
-</div>
+| Priority   | Feature                                                           |   Status   |
+| :--------- | :---------------------------------------------------------------- | :--------: |
+| 🔴 High    | Priority advance booking for seniors, pregnant patients, children | 🟡 Planned |
+| 🟠 Medium  | 500m location-based token generation                              | 🟡 Planned |
+| 🟡 Low     | Dockerized deployment                                             | 🟡 Planned |
+| 🟢 Backlog | CI/CD                                                             |  ⚪ Backlog |
+| 🟢 Backlog | Automated testing                                                 |  ⚪ Backlog |
 
 ---
 
-## 👨‍💻 Author
+# 🤝 Contributing
+
+Contributions are welcome.
+
+### 1. Fork the repository
+
+### 2. Create a feature branch
+
+```bash
+git checkout -b feature/your-feature
+```
+
+### 3. Make your changes
+
+### 4. Commit
+
+```bash
+git add .
+git commit -m "feat: add your feature"
+```
+
+### 5. Push
+
+```bash
+git push origin feature/your-feature
+```
+
+### 6. Open a Pull Request
+
+---
+
+# 📌 Project Highlights
+
+NOQ brings together several traditionally separate hospital workflows into a single system:
+
+```text
+                    ┌─────────────────────┐
+                    │         NOQ         │
+                    │ Hospital Operations │
+                    └──────────┬──────────┘
+                               │
+        ┌──────────────────────┼──────────────────────┐
+        │                      │                      │
+        ▼                      ▼                      ▼
+   Patient Side           Clinical Side         Management Side
+        │                      │                      │
+   Appointments            Doctors                Hospitals
+   Tokens                  Queues                 Departments
+   Queue Tracking          Consultation           Staff
+   Payments                Prescriptions          Revenue
+   Records                 Records                Analytics
+        │                      │                      │
+        └──────────────────────┼──────────────────────┘
+                               │
+                               ▼
+                         Platform Admin
+                               │
+                     Hospitals + Auditing
+                     + Platform Revenue
+```
+
+---
 
 <div align="center">
 
-### Sunil T
+# 🏥 NOQ
 
-Built with ❤️ to make hospital queues smarter, faster, and more transparent.
+### Multi-Tenant Hospital Management System
+
+**One Platform. Multiple Hospitals. Complete Operations.**
+
+**Don't wait in the queue. Know your place in it.**
 
 <br>
 
-**🏥 NOQ — Don't wait in the queue. Know your place in it.**
+Built with ❤️ by **Sunil T**
 
-</div>
+<br>
 
----
-
-<div align="center">
-
-⭐ **If you find NOQ useful, consider giving the repository a star!**
-
+\\
 </div>
